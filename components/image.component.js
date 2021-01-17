@@ -8,6 +8,10 @@ class Image extends React.Component {
 
     }
 
+    /**
+     * The render function returns a react element (created with React.createElement())
+     * Whatever element is returned will be created when this class is used.
+     */
     render() {
         // TASK:
         // make this function return a value
@@ -15,6 +19,6 @@ class Image extends React.Component {
         // TASK:
         // Give the div created below 2 classes "item" and "image"
         // Give the div style.backgroundImage and set it to "url(resources/desert.jpg)"
-        return e("div", {className: "item image", style: {backgroundImage:"url(resources/desert.jpg)"}}, "Testfafasfas");
+        return e("div", {className: "item image", style: {backgroundImage:"url(resources/desert.jpg)"}}, "Text inside this div");
     }
 }
