@@ -1,8 +1,3 @@
-// Create a class called "Image"
-// Give it two methods:
-// enlarge()
-// render()
-// TIMELIMIT: 19:34
 class Image extends React.Component {
     enlarge() {
 
@@ -13,12 +8,18 @@ class Image extends React.Component {
      * Whatever element is returned will be created when this class is used.
      */
     render() {
-        // TASK:
-        // make this function return a value
-        // the value should be a React element ("div", no attributed, "Test" as text)
-        // TASK:
-        // Give the div created below 2 classes "item" and "image"
-        // Give the div style.backgroundImage and set it to "url(resources/desert.jpg)"
-        return e("div", {className: "item image", style: {backgroundImage:"url(resources/desert.jpg)"}}, "Text inside this div");
+        // TASK: Create a new div inside this div, set no attributes, set inner html as the text
+        let content = e("div", null, this.props.text);
+
+        // The value that we gave in main.js can be gotten with this = this.props.imageSrc
+        // TASK: Make the background image of this div show the image that we gave in main.js
+        let attributes = {
+            className: "item image", 
+            style: {
+                backgroundImage:"url(" + this.props.imageSrc + ")"
+            }
+        }
+
+        return e("div", attributes, content);
     }
 }

@@ -44,7 +44,28 @@ header {
     background-position: center;
 }
 
-/**
+/*
+ * Set full width and height
+ * Text - white, 16px, centered horizontally and vertically
+ * make it invisible (opacity)
+ */
+.image div {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image div:hover {
+    opacity: 1;
+}
+
+/*
  * Goal of the task: Customize the image for different screens.
  * How to set different sizes for different screens?
  * 1] Remember it.
@@ -57,8 +78,6 @@ header {
  * 2] For screens with min width 750px: 33.3%
  * 3] min 1000px screen: 25%
  * 4] min 1250px screen: 20%;
- *
- * TIMELIMIT: 12:13
  */
 
 @media (min-width: 500px) {
