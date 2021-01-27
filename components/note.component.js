@@ -1,4 +1,9 @@
 class Note extends React.Component {
+
+    writeToConsole() {
+        console.log(this.props.title + ": " + this.props.text);
+    }
+
     render() {
 
         let content = [
@@ -12,7 +17,8 @@ class Note extends React.Component {
             className: "item note",
             style: {
                 backgroundColor: this.props.color
-            }
+            },
+            onClick: this.writeToConsole.bind(this)
         }
 
         // We want to give it a class

@@ -65,6 +65,27 @@ header {
     opacity: 1;
 }
 
+.note {
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.note h1 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+}
+
+.note p {
+    margin: 0;
+    font-size: 24px;
+}
+
+.caption {
+    background-size: cover;
+    background-position: center;
+}
+
 /*
  * Goal of the task: Customize the image for different screens.
  * How to set different sizes for different screens?

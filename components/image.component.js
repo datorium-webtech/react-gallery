@@ -1,6 +1,6 @@
 class Image extends React.Component {
     enlarge() {
-
+        window.open(this.props.imageSrc);
     }
 
     /**
@@ -17,7 +17,8 @@ class Image extends React.Component {
             className: "item image", 
             style: {
                 backgroundImage:"url(" + this.props.imageSrc + ")"
-            }
+            },
+            onClick: this.enlarge.bind(this)
         }
 
         return e("div", attributes, content);
